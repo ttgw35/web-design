@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
+<title>Cards con Modal</title>
+
+</head>
+<body>
+
+<div class="cards">
+
+<div class="card" onclick="abrirModal()">
+<img src="https://images.unsplash.com/photo-1599940824399-b87987ceb72a">
+<div class="card-content">
+<h3>Piedra del Peñol</h3>
+<p>Monolito turístico con vista panorámica del embalse.</p>
+</div>
+</div>
+
+</div>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+<div class="modal-content">
+
+<button class="close" onclick="cerrarModal()">X</button>
+
+<img src="https://images.unsplash.com/photo-1599940824399-b87987ceb72a">
+
+<div class="modal-body">
+<h2>Piedra del Peñol</h2>
+
+<p>
+Monolito de 220 metros con 740 escalones que ofrecen
+vista panorámica del embalse y montañas.
+</p>
+
+<ul>
+<li>Tiene 740 escalones</li>
+<li>Formada hace millones de años</li>
+<li>Vista 360 grados</li>
+<li>Zona turística principal</li>
+</ul>
+
+</div>
+
+</div>
+</div>
+
+<script>
+function abrirModal(){
+document.getElementById("modal").style.display="flex";
+}
+
+function cerrarModal(){
+document.getElementById("modal").style.display="none";
+}
+
+// cerrar al hacer clic fuera
+window.onclick = function(e){
+let modal = document.getElementById("modal");
+if(e.target == modal){
+modal.style.display="none";
+}
+}
+</script>
+
+</body>
+</html>
